@@ -79,6 +79,36 @@
         </div>
       </div>
 
+      <div class="card form-card reveal" style="margin-top:28px;">
+        <span class="card-corner"></span><span class="card-corner"></span>
+        <p class="eyebrow" style="margin-bottom:8px;">Transmit</p>
+        <h3>Send a message</h3>
+        <p>Fill this in and hit send — it opens your email app with the message addressed to me, ready to go.</p>
+
+        <form id="contact-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">Your email</label>
+              <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" required>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Write your message here…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message →</button>
+          <div class="form-status" id="cf-status"></div>
+        </form>
+      </div>
+
       <div class="card reveal" style="margin-top:28px;">
         <span class="card-corner"></span><span class="card-corner"></span>
         <h3 style="margin-bottom:10px;">Quick copy</h3>
