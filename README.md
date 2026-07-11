@@ -36,6 +36,7 @@ portfolio/
 ├── style.css
 ├── script.js
 ├── photo.png
+└── Rayen_Hajjem_CV.pdf
 └── README.md
 ```
 
@@ -53,7 +54,7 @@ Navigate to the project directory:
 cd portfolio
 ```
 
-Since this is a static website, simply open `index.html` in your browser or use a local development server such as VS Code Live Server.
+Since this is a static website, simply open `index.html` in your browser or use a local development server such as VS Code Server.
 
 ## 🌍 Live Website
 
@@ -90,10 +91,6 @@ https://rayenhajjem.dev/
 ## 🎯 Future Improvements
 
 - Dark/Light mode
-- Blog section
-- Downloadable CV
-- Project filtering
-- Research publications page
 - Interactive project demos
 - Multi-language support (English/French/Arabic)
 
