@@ -210,29 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ============ contact form -> mailto ============
-  const contactForm = document.getElementById('contact-form');
-  if(contactForm){
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('cf-name').value.trim();
-      const email = document.getElementById('cf-email').value.trim();
-      const subject = document.getElementById('cf-subject').value.trim();
-      const message = document.getElementById('cf-message').value.trim();
 
-      const to = 'rayenhajjem04@gmail.com';
-      const mailSubject = `[Portfolio] ${subject}`;
-      const mailBody = `${message}\n\n—\n${name}\n${email}`;
-
-      const mailtoUrl = `mailto:${to}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
-
-      const status = document.getElementById('cf-status');
-      if(status) status.textContent = 'Opening your email app…';
-
-      window.location.href = mailtoUrl;
-    });
-  }
-});
 // ===== EmailJS Contact Form =====
 
 const contactForm = document.getElementById("contact-form");
