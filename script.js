@@ -233,3 +233,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// ===== EmailJS Contact Form =====
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        const btn = contactForm.querySelector("button[type='submit']");
+        const originalText = btn.textContent;
+
+        btn.disabled = true;
+        btn.textContent = "Sending...";
+
+        emailjs.send("service_ox75vpi", "template_qeaxpk3", {
+
+            name: document.getElementById("name").value,
+
+            email: document.getElementById("mail").value,
+
+            subject: document.getElementById("subject").value,
+
+            message: document.getElementById("message").value
+
+        })
+
+        .then(function () {
+
+            btn.textContent = "✅ Message Sent!";
+
+            contactForm.reset();
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.textContent = originalText;
+            }, 2500);
+
+        })
+
+        .catch(function(error) {
+
+            console.error(error);
+
+            btn.textContent = "❌ Failed";
+
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.textContent = originalText;
+            }, 2500);
+
+        });
+
+    });
+
+}
